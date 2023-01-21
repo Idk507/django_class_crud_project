@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% block ody_block%}
+
+<html lang ="en">
+    <head>
+        <meta charset = "utf-8">
+        <title> Students mark list </title>
+
+    </head>
+    <body>
+        <a href = "/create">Create data</a><br/>
+       <h1>Students :</h1>
+       <table border=2 >
+        <thead>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+
+            
+        </thead>
+        {% for i in student_list %}
+        <tr>
+            <td><a href="/{{i.id}}">{{i.id}}</a></td>
+            <td>{{i.firstname |lower}}</td>
+            <td>{{i.lastname }}</td>
+            <td>{{i.testscore1 | add:"2"}}</td>
+            <td>{{i.testscore2}}</td>
+            <td>{{i.testscore3}}</td>
+            <td>{{i.testscore4}}</td>
+            <td>{{i.testscore5}}</td>
+            <td>{{i.testscore6}}</td>
+            {% regroup student_list|dictsort:"firstname" by firstname as name %}
+            {% empty %}
+            <li>Sorry, no data in this list.</li>
+            
+
+        
+
+
+        </tr>
+        {% endfor %}
+       </table>
+    </body>
+
+{%endblock%}
+    </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Student detail</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <ol>
+            
+            <h3><li>First name: {{student.firstname}}</li></h3>
+            <h3><li>Last name: {{student.lastname}}</li></h3>
+            <h3><li>Test Score1: {{student.testscore1}}</li></h3>
+            <h3><li>Test Score2: {{student.testscore2}}</li></h3>
+            <h3><li>Test Score3: {{student.testscore3}}</li></h3>
+            <h3><li>Test Score4: {{student.testscore4}}</li></h3>
+            <h3><li>Test Score5: {{student.testscore5}}</li></h3>
+            <h3><li>Test Score6: {{student.testscore6}}</li></h3>
+
+            <td><a href="/delete/{{student.id}}">Delete</a></td>
+            <td><a href="/update/{{student.id}}">Update</a></td>
+        </ol>
+        <a href ="/slv">back</a>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

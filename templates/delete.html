@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "./base.html"%}
+{%block body_block%}
+        <h1>details after deleted</h1>
+       <table>
+        <tr>
+            <td>{{student.firstname}} ?</td>
+            
+            <form method="POST" >
+                {% csrf_token %}
+                <input type="submit" value="confirm">
+                <a href ="/{{student.id}}">Cancel</a>
+
+            </form>
+        </tr>
+       </table>
+   {%endblock%}
